@@ -50,7 +50,7 @@ image_data = [
     ("BOTTLE", "./media/bottle.jpg"),
     ("SHEEP", "./media/sheep.jpg"),
     ("BOAT", "./media/boat.jpg"),
-    ("HORSE", "./media/hourse.jpg"),
+    ("HORSE", "./media/horse.jpg"),
 ]
 
 # Display 2 images per row
