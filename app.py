@@ -1,69 +1,114 @@
 import streamlit as st 
-from PIL import Image
 
 st.set_page_config(page_title="Home",
                    layout='wide',
                    page_icon='./images/home.png')
 
 st.header("Real-Time & Images Object Detection ")
+
 st.subheader("Automatically detects 20 objects from image")
 st.caption("[Click here for App](/YOLO_for_image/)")
 
-# Display example image comparison
-col1, col2 = st.columns(2)
+col1, col2, = st.columns(2)
 with col1:
     st.write('Normal image')
-    st.image('./media/realtimenormal.png', width=400)
+    st.image('./media/realtimenormal.png')
     
 with col2:
     st.write('Detected image')
-    st.image('./media/realtimedetect.png', width=400)
+    st.image('./media/realtimedetect.png')
 
 st.subheader("Real time Object detection")
 st.caption("[Click here for App](/YOLO_webrtc/)")
 
-st.subheader("Below are the objects our model can detect:")
+st.subheader("Below give are the Object the our Model will detect")
 
-# Helper to load and resize images
-def load_image(path, size=(300, 300)):
-    image = Image.open(path)
-    return image.resize(size)
-
-# List of labels and image paths
-image_data = [
-    ("DOG", "./media/dog.jpg"),
-    ("PERSON", "./media/person.jpg"),
-    ("AEROPLANE", "./media/aeroplane.jpg"),
-    ("COW", "./media/cow.jpg"),
-    ("SOFA", "./media/sofa.jpg"),
-    ("POTTED PLANT", "./media/pottedplant.jpg"),
-    ("CAR", "./media/car.jpg"),
-    ("CAT", "./media/cat.jpg"),
-    ("CHAIR", "./media/chair.jpg"),
-    ("BICYCLE", "./media/bicycle.jpg"),
-    ("MOTOR BIKE", "./media/bike.jpg"),
-    ("DINING TABLE", "./media/dinningtable.jpg"),
-    ("TV MONITOR", "./media/tv.jpg"),
-    ("BUS", "./media/bus.jpg"),
-    ("TRAIN", "./media/train.jpg"),
-    ("BIRD", "./media/bird.jpg"),
-    ("BOTTLE", "./media/bottle.jpg"),
-    ("SHEEP", "./media/sheep.jpg"),
-    ("BOAT", "./media/boat.jpg"),
-    ("HORSE", "./media/horse.jpg"),
-]
-
-# Display 2 images per row
-for i in range(0, len(image_data), 2):
-    col1, col2 = st.columns(2)
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write(' DOG')
+    st.image('./media/dog.jpg',width=300)
     
-    label1, path1 = image_data[i]
-    with col1:
-        st.write(label1)
-        st.image(load_image(path1), width=300)
+with col2:
+    st.write('PERSON')
+    st.image('./media/person.jpg',width=300)
+    
+with col3:
+    st.write('AEROPLANE')
+    st.image('./media/aeroplane.jpg',width=300)
 
-    if i + 1 < len(image_data):
-        label2, path2 = image_data[i + 1]
-        with col2:
-            st.write(label2)
-            st.image(load_image(path2), width=300)
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write(' COW')
+    st.image('./media/cow.jpg',width=300)
+
+with col2:
+    st.write(' SOFA')
+    st.image('./media/sofa.jpg',width=300)
+
+with col3:
+    st.write('POTTED PLANT')
+    st.image('./media/pottedplant.jpg',width=300)
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write('CAR')
+    st.image('./media/car.jpg',width=300)
+    
+with col2:
+    st.write('CAT')
+    st.image('./media/cat.jpg',width=300)
+    
+with col3:
+    st.write('CHAIR')
+    st.image('./media/chair.jpg',width=300)
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write(' BICYCLE')
+    st.image('./media/bicycle.jpg',width=300)
+    
+with col2:
+    st.write(' MOTOR BIKE')
+    st.image('./media/bike.jpg',width=300)
+    
+with col3:
+    st.write('DINNING TABLE')
+    st.image('./media/dinningtable.jpg',width=300)
+
+col1, col2 = st.columns(2)
+    
+with col1:
+    st.write(' TV MONITOR')
+    st.image('./media/tv.jpg',width=400)
+    
+with col2:
+    st.write('BUS')
+    st.image('./media/bus.jpg',width=400)
+
+col1, col2, = st.columns(2)
+with col1:
+    st.write('TRAIN')
+    st.image('./media/train.jpg',width=400)
+    
+with col2:
+    st.write(' BIRD')
+    st.image('./media/bird.jpg',width=400)
+
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.write('BOTTLE')
+    st.image('./media/bottle.jpg',width=300)
+
+with col2:
+    st.write('SHEEP')
+    st.image('./media/sheep.jpg',width=300)
+    
+with col3:
+    st.write('BOAT')
+    st.image('./media/boat.jpg',width=300)
+
+col1, col2, = st.columns(2)
+with col1:
+    st.write(' HORSE')
+    st.image('./media/hourse.jpg',width=300)
+
