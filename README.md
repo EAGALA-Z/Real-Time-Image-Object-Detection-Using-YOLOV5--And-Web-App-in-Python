@@ -96,7 +96,8 @@ streamlit run pages/2_YOLO_webrtc.py
 <br>
 
 
-[🎥 Watch the demo](demo.mp4)
+[🎥 Watch the demo](object-detiction.mp4)
+This is video how code runs and shows the output
 
 
 ## 🙌 Acknowledgements
