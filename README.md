@@ -95,6 +95,10 @@ streamlit run pages/2_YOLO_webrtc.py
 
 <br>
 
+
+[🎥 Watch the demo](demo.mp4)
+
+
 ## 🙌 Acknowledgements
 
 - [YOLOv5 by Ultralytics](https://github.com/ultralytics/yolov5)  
